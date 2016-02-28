@@ -1,5 +1,5 @@
 {
-  "name": "React-Lib",
+  "name": "react-lib",
   "version": "0.1.0",
   "scripts": {
     "compile": "babel src -d lib",

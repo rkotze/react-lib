@@ -1,5 +1,5 @@
 import ButtonGroup from './button-group/button-group';
 
 export {
-	ButtonGroup
+	ButtonGroup: ButtonGroup
 };
