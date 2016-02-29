@@ -1,5 +1,5 @@
-import ButtonGroup from './button-group/button-group';
+import ButtonGroup from './button-group/';
 
 export default {
-	ButtonGroup: ButtonGroup
+	ButtonGroup
 };
