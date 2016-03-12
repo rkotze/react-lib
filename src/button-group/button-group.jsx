@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 let ButtonGroup = React.createClass({
   render: function() {
