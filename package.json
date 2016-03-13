@@ -2,7 +2,7 @@
   "name": "react-lib",
   "version": "0.1.2",
   "scripts": {
-    "server": "webpack-dev-server --content-base lib/",
+    "devserver": "webpack-dev-server --content-base web-app/",
     "compile": "webpack --progress --colors",
     "prepublish": "npm run compile"
   },

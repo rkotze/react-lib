@@ -1,8 +1,13 @@
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+        React: "./src/index.js",
+        Examples: "./web-app/index.js"
+    },
     output: {
         path: "./lib",
-        filename: "index.js"
+        filename: "[name]-lib.js",
+        library: "[name]Lib",
+        libraryTarget: "umd"
     },
     module: {
         loaders: [
@@ -15,5 +20,8 @@ module.exports = {
     },
     resolve: {
         extensions: ['', '.js', '.jsx'] 
-    }
+    },
+    externals: [
+        "ReactLib"
+    ]
 };
