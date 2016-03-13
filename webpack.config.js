@@ -18,6 +18,10 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        inline: true,
+        port: 8009
+    },
     resolve: {
         extensions: ['', '.js', '.jsx'] 
     },
