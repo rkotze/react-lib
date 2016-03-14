@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { ButtonGroup } from 'ReactLib';
+import { ButtonGroup, ActionButton } from 'ReactLib';
 
-render(<ButtonGroup btnName="richard" />, 
+render(<ButtonGroup />, 
 	document.getElementById('button-group'));

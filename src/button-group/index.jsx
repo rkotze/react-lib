@@ -1,25 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-
-const DeleteAccount = ({children, btn}) => (
-  <div>
-    <p>Are you sure?</p>
-    <div>Yep</div>
-    <button {...btn}>{children}</button>
-  </div>
+const ActionButton = ({children, actionId}) => (
+  <button data-action-id={actionId}>
+    {children}
+  </button>
 );
 
-let ButtonGroup = React.createClass({
-  render: function() {
-  	const bprops = {
-  		color: 'silver',
-  		cursor: 'red'
-  	};
-    return <div>
-    	<button>{this.props.btnName}</button>
-    	<DeleteAccount btn={bprops}>Delete Me</DeleteAccount>
-    </div>;
+class ButtonGroup extends Component {
+  render() {
+    return (
+      <div>
+        {this.props.actionList.map((B, i) => {
+          return <B.action key={i} action-id={B.actionId}>{B.text}</B.action>
+        })}
+      </div>
+    );  
   }
-});
+}
 
-export default ButtonGroup;
+ButtonGroup.defaultProps = {
+  actionList: [{
+    action: ActionButton,
+    actionId: 1,
+    text: "No Action"
+  }]
+};
+
+export { 
+  ButtonGroup,
+  ActionButton
+};
