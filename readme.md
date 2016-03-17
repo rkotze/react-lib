@@ -1,11 +1,22 @@
-## React Lib
+# React Lib
 
 Test for building a library of ReactJS components
 
-Instructions:
+## Instructions:
 
-`npm i`
+Install: `npm i`
 
-Run:
+Run app: `npm start`
 
-- `npm start`
+## Structure
+
+- `src` is where you develop your actual components in ES6
+- `web-app` import lib of components and render to app for testing
+- `lib` generated from src ES6 to ES5.1
+
+## Tech
+
+- Web pack to deal with bundling and building library
+- Babel to compile from ES6 to ES5.1 and convert ReactJS JSX
+
+See `package.json` for details
