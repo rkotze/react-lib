@@ -2,7 +2,8 @@
   "name": "react-lib",
   "version": "0.1.3",
   "scripts": {
-    "compile": "babel src -d lib",
+    "start": "webpack-dev-server --content-base web-app/",
+    "compile": "webpack --progress --colors",
     "prepublish": "npm run compile"
   },
   "main": "lib/index.js",
@@ -13,7 +14,11 @@
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
+    "babel-core": "^6.7.2",
+    "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.5.0",
-    "babel-preset-react": "^6.5.0"
+    "babel-preset-react": "^6.5.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
   }
 }
