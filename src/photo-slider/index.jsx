@@ -10,7 +10,7 @@ class PhotoSlider extends Component {
 	render(){
 		return (
 			<div id="photo-slider">
-       <PhotoBox src="http://lorempixel.com/400/200/sports/1/" alt="sports" />
+       <PhotoBox src="http://placehold.it/250x250?text=best+test+image" alt="test image" />
 			</div>
 		);
 	}
