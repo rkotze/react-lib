@@ -8,6 +8,8 @@ Install: `npm i`
 
 Run app: `npm start`
 
+[localhost:8009](http://localhost:8009)
+
 ## Structure
 
 - `src` is where you develop your actual components in ES6
