@@ -11,7 +11,14 @@ export class WebApp extends Component {
     return (
       <div>
 	      <h2>Button Group</h2>
-	      <ButtonGroup />
+	      <ButtonGroup>
+	      	<ActionButton actionId="1" onClick={() => console.log('howdy')}>
+	      		Action 1
+	      	</ActionButton>
+	      	<ActionButton actionId="2">
+	      		Action 2
+	      	</ActionButton>
+	      </ButtonGroup>
 
 	      <h2>Photo Slider</h2>
 	      <PhotoSlider />
