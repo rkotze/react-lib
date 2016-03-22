@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import actionStyle from './button-group.less';
 
 const ActionButton = (props) => {
   let { actionId, children, onClick } = props;
   return (
-    <button data-action-id={actionId} onClick={onClick}>
+    <button className="action-button" data-action-id={actionId} onClick={onClick}>
       {children}
     </button>
   );
