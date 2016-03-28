@@ -30,9 +30,7 @@ class PhotoSlider extends Component {
 		return (
 			<div id="photo-slider">
        <PhotoBox position={this.state.position}>
-       	<Photo src="http://placehold.it/550X200/AA0000/fff?text=First best+test+image" alt="First test image" />
-       	<Photo src="http://placehold.it/550X200/00AA00/fff?text=Second best+test+image" alt="Second test image" />
-       	<Photo src="http://placehold.it/550X200/0000AA/fff?text=Third best+test+image" alt="Third test image" />
+       	{this.props.children}
        </PhotoBox>
        <ActionButton onClick={this.changeSlide.bind(this, -1)}>&lt; Left</ActionButton>
        &nbsp;|&nbsp;
@@ -42,4 +40,7 @@ class PhotoSlider extends Component {
 	}
 }
 
-export { PhotoSlider };
+export { 
+	PhotoSlider,
+	Photo
+};

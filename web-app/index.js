@@ -3,7 +3,8 @@ import { render } from 'react-dom';
 import { 
   ButtonGroup, 
   ActionButton, 
-  PhotoSlider 
+  PhotoSlider,
+  Photo 
 } from 'ReactLib';
 
 export class WebApp extends Component {
@@ -21,7 +22,11 @@ export class WebApp extends Component {
 	      </ButtonGroup>
 
 	      <h2>Photo Slider</h2>
-	      <PhotoSlider />
+	      <PhotoSlider>
+          <Photo src="http://placehold.it/550X200/AA0000/fff?text=First best+test+image" alt="First test image" /> 
+          <Photo src="http://placehold.it/550X200/00AA00/fff?text=Second best+test+image" alt="Second test image" />
+          <Photo src="http://placehold.it/550X200/0000AA/fff?text=Third best+test+image" alt="Third test image" />
+        </PhotoSlider>
       </div>
     );
   }
