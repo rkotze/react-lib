@@ -20,10 +20,22 @@ class PhotoSlider extends Component {
 	}
 
 	changeSlide(position) {
-		let newPosition = this.state.position + position;
+		let newPosition = this.state.position;
+		if(this.shouldChange(this.props.children, this.state.position + position)){
+			newPosition = this.state.position + position;
+		}
 		this.setState({
 			position: newPosition
 		});
+	}
+
+	shouldChange(children, position){
+		return position >= 0 && position < children.length;
+	}
+
+	// just trying this life cycle out
+	shouldComponentUpdate(nextProps, nextState) {
+		return this.shouldChange(nextProps.children, nextState.position);
 	}
 
 	render(){

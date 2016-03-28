@@ -22,3 +22,15 @@ Run app: `npm start`
 - Babel to compile from ES6 to ES5.1 and convert ReactJS JSX
 
 See `package.json` for details
+
+## Lib components
+
+** PhotoSlider example **
+
+```javascript
+<PhotoSlider>
+  <Photo src="/test/image1.jpg" alt="First test image" /> 
+  <Photo src="/test/image2.jpg" alt="Second test image" />
+  ... more
+</PhotoSlider>
+```
