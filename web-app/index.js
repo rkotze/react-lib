@@ -4,13 +4,20 @@ import {
   ButtonGroup, 
   ActionButton, 
   PhotoSlider,
-  Photo 
+  Photo,
+  Lists 
 } from 'ReactLib';
 
 export class WebApp extends Component {
   render() {
     return (
       <div>
+        <h2>List</h2>
+        <Lists>
+          <h1>A</h1>
+          <span>B</span>
+          <span>C</span>
+        </Lists>
 	      <h2>Button Group</h2>
 	      <ButtonGroup>
 	      	<ActionButton actionId="1" onClick={() => console.log('howdy')}>
