@@ -6,7 +6,8 @@ import {
   PhotoSlider,
   Photo,
   Lists,
-  CodeSnippet
+  CodeSnippet,
+  Toggler
 } from 'ReactLib';
 
 export class WebApp extends Component {
@@ -49,6 +50,15 @@ export class WebApp extends Component {
             render(PhotoApp);
           `}
         </CodeSnippet>
+
+        <Toggler>
+          <Lists>
+            <h1>list</h1>
+            <span>r</span>
+            <span>m</span>
+          </Lists>
+        </Toggler>
+
       </div>
     );
   }

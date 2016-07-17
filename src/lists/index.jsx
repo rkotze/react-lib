@@ -1,11 +1,11 @@
 import React from 'react';
 
-export const Lists = ({children}) => {
+export const Lists = ({children, className}) => {
     // React.Children.map(children, (item) => (
     //   console.log(item)
     // ));
     return (
-      <ul>
+      <ul className={className}>
         {
           React.Children.map(children, (childNode) => (
               <li>{childNode}</li>
