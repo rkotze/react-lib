@@ -18,10 +18,16 @@ export class Toggler extends Component {
 
   render() {
   	const { className } = this.state;
+  	const toggle = this.toggle.bind(this);
     return (
       <div>
-      	<button onClick={this.toggle.bind(this)}>Toggle</button>
       	{React.Children.map(this.props.children, (child) => {
+      		if(child.props.toggleAction){
+      			return React.cloneElement(child, {
+	      			onClick: toggle
+	      		});
+	      	}
+
       		return React.cloneElement(child, {
       			className: className
       		});

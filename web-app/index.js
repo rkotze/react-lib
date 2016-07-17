@@ -52,6 +52,7 @@ export class WebApp extends Component {
         </CodeSnippet>
 
         <Toggler>
+          <input toggleAction type="button" value="Toggle me" />
           <Lists>
             <h1>list</h1>
             <span>r</span>
