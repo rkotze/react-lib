@@ -9,6 +9,7 @@ import {
   CodeSnippet,
   Toggler
 } from 'ReactLib';
+import { FirstNameInput } from './first-name-input';
 
 export class WebApp extends Component {
   render() {
@@ -59,6 +60,10 @@ export class WebApp extends Component {
             <span>m</span>
           </Lists>
         </Toggler>
+
+        <h2>Inputs</h2>
+
+        <FirstNameInput />
 
       </div>
     );
