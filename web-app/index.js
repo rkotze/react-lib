@@ -32,9 +32,9 @@ export class WebApp extends Component {
 
 	      <h2>Photo Slider</h2>
 	      <PhotoSlider>
-          <Photo src="http://placehold.it/550X200/AA0000/fff?text=First best+test+image" alt="First test image" /> 
-          <Photo src="http://placehold.it/550X200/00AA00/fff?text=Second best+test+image" alt="Second test image" />
-          <Photo src="http://placehold.it/550X200/0000AA/fff?text=Third best+test+image" alt="Third test image" />
+          <Photo id="1" src="http://placehold.it/550X200/AA0000/fff?text=First best+test+image" alt="First test image" /> 
+          <Photo id="2" src="http://placehold.it/550X200/00AA00/fff?text=Second best+test+image" alt="Second test image" />
+          <Photo id="3" src="http://placehold.it/550X200/0000AA/fff?text=Third best+test+image" alt="Third test image" />
         </PhotoSlider>
 
         <CodeSnippet lang='jsx'>

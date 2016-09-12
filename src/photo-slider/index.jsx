@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ActionButton } from '../button-group';
+import partition from 'lodash/partition';
 
 const PhotoBox = ({children, position}) => (
 	<div id="photo-box">
@@ -39,6 +40,9 @@ class PhotoSlider extends Component {
 	}
 
 	render(){
+		console.log(partition(this.props.children, (child) => {
+			return child.props.id == "1"
+		}));
 		return (
 			<div id="photo-slider">
        <PhotoBox position={this.state.position}>

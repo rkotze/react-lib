@@ -9,6 +9,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "core-js": "^0.6.0",
+    "lodash": "^4.15.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
   },
