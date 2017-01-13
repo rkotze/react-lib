@@ -7,7 +7,9 @@ import {
   Photo,
   Lists,
   CodeSnippet,
-  Toggler
+  Toggler,
+  Form,
+  Inputs
 } from 'ReactLib';
 import { FirstNameInput } from './first-name-input';
 
@@ -15,6 +17,10 @@ export class WebApp extends Component {
   render() {
     return (
       <div>
+      <h2>Form</h2>
+      <Form>
+        <Inputs id="Firstname" value={20} />
+      </Form>
         <h2>List</h2>
         <Lists>
           <h1>A</h1>
