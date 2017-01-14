@@ -9,6 +9,7 @@ import {
   CodeSnippet,
   Toggler,
   Form,
+  FormWithValidation,
   Inputs
 } from 'ReactLib';
 import { FirstNameInput } from './first-name-input';
@@ -18,9 +19,9 @@ export class WebApp extends Component {
     return (
       <div>
       <h2>Form</h2>
-      <Form>
+      <FormWithValidation>
         <Inputs id="Firstname" value={20} />
-      </Form>
+      </FormWithValidation>
         <h2>List</h2>
         <Lists>
           <h1>A</h1>
