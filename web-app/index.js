@@ -15,12 +15,21 @@ import {
 import { FirstNameInput } from './first-name-input';
 
 export class WebApp extends Component {
+  constructor() {
+    super();
+  }
   render() {
     return (
       <div>
       <h2>Form</h2>
-      <FormWithValidation>
-        <Inputs id="Firstname" value={20} />
+      <FormWithValidation onSubmit={(e, data) => {
+        // debugger;
+        e.preventDefault();
+        console.log(data);
+        console.log('i was submitted');
+      }}>
+        <Inputs id="Firstname" name="firstName" value={20} />
+        <Inputs id="submit" type="submit" value="submit me" />
       </FormWithValidation>
         <h2>List</h2>
         <Lists>

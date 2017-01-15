@@ -18,14 +18,30 @@ export class Form extends Component {
 function AddValidation(WrapperComponent) {
   return class extends Component {
 
+    constructor() {
+      super();
+      this.state = { fields: {} };
+    }
+
+    static defaultProps = {
+      id: 'defaultForm'
+    }
+
     handleValidation = (e) => {
-      e.preventDefault();
+      const fields = document.getElementById(this.props.id);
+      const result = Object.keys(fields).reduce((acc, name) =>{
+        const field = fields[name];
+        if(field.name && field.value)
+          acc[field.name] = field.value;
+        return acc;
+      }, {});
+      this.props.onSubmit(e, result);
       console.log('Im valid');
     }
 
     render() {
-      const { onSubmit, ...other} = this.props;
-      return <WrapperComponent onSubmit={this.handleValidation} {...other} />
+      const { onSubmit, id, ...other} = this.props;
+      return <WrapperComponent {...other} id={id} onSubmit={this.handleValidation} />
     }
   }
 }

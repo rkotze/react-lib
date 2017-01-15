@@ -2,9 +2,9 @@ import React, { PropTypes, Component } from 'react';
 
 export class Inputs extends Component {
 
-  constructor(){
+  constructor(props){
     super();
-    this.state = { value: '' };
+    this.state = { value: props.value };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -17,11 +17,11 @@ export class Inputs extends Component {
   }
 
   render(){
-    const { type, labelText, id, onBlur} = this.props;
+    const { type, labelText, id, ...other} = this.props;
     return (
       <div>
         <label htmlFor={id}>{labelText}</label>
-        <input id={id} type={type} value={this.state.value} onChange={this.handleChange} onBlur={onBlur} />
+        <input {...other} id={id} type={type} value={this.state.value} onChange={this.handleChange} />
       </div>
     );
   }
