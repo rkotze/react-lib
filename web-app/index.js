@@ -26,9 +26,9 @@ export class WebApp extends Component {
         // debugger;
         e.preventDefault();
         console.log(data);
-        console.log('i was submitted');
       }}>
-        <Inputs id="Firstname" name="firstName" value={20} />
+        <Inputs id="input1" labelText="First name" name="firstName" value="" />
+        <Inputs id="input2" labelText="Last name" name="lastName" value="" />
         <Inputs id="submit" type="submit" value="submit me" />
       </FormWithValidation>
         <h2>List</h2>
